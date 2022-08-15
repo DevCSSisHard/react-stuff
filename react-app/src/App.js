@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+//import HelloWorld from './Components/HelloWorld'
+//import CounterHook from "./Components/CounterHook"
+import Header from "./Components/Header"
+import Footer from "./Components/Footer"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import HelloWorld from "./Components/HelloWorld";
+import CounterHook from "./Components/CounterHook";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+
+      <Router>
+        <ul>
+          <li>
+            <Link to="/" className={"text-blue-500"}>Home</Link>
+          </li>
+          <li>
+            <Link to="/" className={"text-blue-500"}>Counting with hooks</Link>
+          </li>
+          <li>
+            <Link to="/" className={"text-blue-500"}>About</Link>
+          </li>
+        </ul>
+
+        <Routes>
+          <Route path='/' element={<Header/>}>
+
+          </Route>
+          <Route path='/about' element={<HelloWorld/>}>
+
+          </Route>
+          <Route path='/hooks' element={<CounterHook/>}>
+
+          </Route>
+        </Routes>
+      </Router>
+
+      {/* <HelloWorld name="wowe man" /> */}
+      <Footer />
     </div>
   );
 }
