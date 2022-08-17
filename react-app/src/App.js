@@ -1,6 +1,4 @@
 import './index.css';
-//import HelloWorld from './Components/HelloWorld'
-//import CounterHook from "./Components/CounterHook"
 import Header from "./Components/Header"
 import Footer from "./Components/Footer"
 import {
@@ -11,13 +9,35 @@ import {
 } from "react-router-dom";
 import HelloWorld from "./Components/HelloWorld";
 import CounterHook from "./Components/CounterHook";
+import Home from "./Views/Home";
+import About from "./Views/About";
+import React from "react";
 
 function App() {
+
   return (
     <div>
+
       <Header />
 
-      <Router>
+      <Routes>
+        <Route path="/HelloWorld" element={<HelloWorld />} />
+        <Route path="/CounterHook" element={<CounterHook />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+
+      <Footer />
+
+    </div>
+
+  );
+}
+
+{/* <HelloWorld name="wowe man" /> */}
+export default App;
+
+{/*
         <ul>
           <li>
             <Link to="/" className={"text-blue-500"}>Home</Link>
@@ -41,12 +61,4 @@ function App() {
 
           </Route>
         </Routes>
-      </Router>
-
-      {/* <HelloWorld name="wowe man" /> */}
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
+        */}
