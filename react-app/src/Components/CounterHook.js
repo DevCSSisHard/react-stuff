@@ -5,7 +5,7 @@ function CounterHook(){
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <div className={"min-h-screen dark:text-white"}>
 
       <h1>
         {count}

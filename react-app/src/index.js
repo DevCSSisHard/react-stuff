@@ -4,15 +4,27 @@ import './tailwind.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
+import {ThemeProvider} from "./Components/ThemeContext";
+import Background from "./Components/Background";
+import Toggle from "./Components/ThemeToggle";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ThemeProvider>
+      <Background>
+        <div className="absolute right-0 top-10 mr-4 mt-4 md:mr-6 md:mt-6">
+          <Toggle />
+        </div>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Background>
+    </ThemeProvider>,
 
-  </React.StrictMode>
+
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

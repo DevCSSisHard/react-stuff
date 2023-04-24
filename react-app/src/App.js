@@ -7,27 +7,39 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import HelloWorld from "./Components/HelloWorld";
+import JohnChilling from "./Components/JohnChilling";
 import CounterHook from "./Components/CounterHook";
 import Home from "./Views/Home";
 import About from "./Views/About";
+import Login from "./Components/Login"
+import Register from "./Components/Register"
 import React from "react";
+import Reset from "./Components/Reset";
+import Dashboard from "./Components/Dashboard";
+import Audiogame from "./Views/Audiogame";
+
 
 function App() {
 
   return (
-    <div>
+    <div className = "min-h-screen bg-neon-city">
 
       <Header />
 
       <Routes>
-        <Route path="/HelloWorld" element={<HelloWorld />} />
+        <Route path="/John-Chilling" element={<JohnChilling />} />
+        <Route path="/Register" element={<Register />} />
         <Route path="/CounterHook" element={<CounterHook />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Reset" element={<Reset />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Audiogame" element={<Audiogame />} />
         <Route path="/" element={<Home />} />
       </Routes>
 
       <Footer />
+
 
     </div>
 

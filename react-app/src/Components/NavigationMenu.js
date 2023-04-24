@@ -11,6 +11,13 @@ function NavigationMenu(props){
           </nav>
         </li>
 
+        <li>
+          <nav>
+            <Link to="/Login" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>Login & Sign-up</Link>
+          </nav>
+        </li>
+
+
 
         <li>
           <nav>
@@ -18,6 +25,11 @@ function NavigationMenu(props){
           </nav>
         </li>
 
+        <li>
+          <nav>
+            <Link to="/Audiogame" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>Audio-Game</Link>
+          </nav>
+        </li>
 
         <li>
           <nav>
@@ -27,7 +39,7 @@ function NavigationMenu(props){
 
         <li>
           <nav>
-            <Link to="/HelloWorld" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>John-Cena</Link>
+            <Link to="/John-Chilling" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>John-Cena</Link>
           </nav>
         </li>
 
